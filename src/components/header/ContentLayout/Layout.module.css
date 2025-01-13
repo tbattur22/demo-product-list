@@ -1,0 +1,19 @@
+.container {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    label {
+        color: darkblue;
+        font-weight: 500;
+    }
+    select {
+        margin: 1em;
+        padding: 0.5em;
+        background-color: darkblue;
+        border-radius: 10px;
+    }
+}

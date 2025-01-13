@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing:border-box;
+    width: fit-content;
+    height: fit-content;
+
+    &:hover {
+        border: 1px solid white;
+    }
+}
