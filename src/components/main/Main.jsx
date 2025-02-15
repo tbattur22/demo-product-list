@@ -10,15 +10,15 @@ const styleMap = {
   'classesTable': classesTable
 }
 const Main = ({layout, products, loadMore}) => {
-    console.log(`Main: layout: ${layout}, products`,products);
+    // console.log(`Main: layout: ${layout}, products`,products);
     const curStyle = styleMap[`classes${layout}`];
     const myRef = useRef(null);
 
     const callbackFunction = (entries) => {
-        console.log(`Main:callbackFunction():entries`,entries);
+        // console.log(`Main:callbackFunction():entries`,entries);
         const [entry] = entries;
         if (entry.isIntersecting) {
-            console.log(`callbackFunction(): entry.isIntersecting true so calling loadMore`,entry);
+            // console.log(`callbackFunction(): entry.isIntersecting true so calling loadMore`,entry);
             loadMore(entry);
         }
     }
@@ -29,10 +29,10 @@ const Main = ({layout, products, loadMore}) => {
     }
 
     useEffect(() => {
-        console.log(`Main():useEffect() called.`);
+        // console.log(`Main():useEffect() called.`);
         const observer = new IntersectionObserver(callbackFunction, options);
         if (myRef.current) {
-            console.log(`Main():useEffect():myRef.current is true, so start observing`);
+            // console.log(`Main():useEffect():myRef.current is true, so start observing`);
             observer.observe(myRef.current);
         }
 
@@ -55,9 +55,9 @@ const Main = ({layout, products, loadMore}) => {
         const tableRows = products?.map((product, i) => {
             return <TableRow key={product.id} product={product}></TableRow>
         })
-        console.log(`Main:tableRows:`,tableRows);
+        // console.log(`Main:tableRows:`,tableRows);
         tableRows.unshift(<TableHeader key={0} />);
-        console.log(`Main:tableRows: final`,tableRows);
+        // console.log(`Main:tableRows: final`,tableRows);
 
         content = tableRows
             

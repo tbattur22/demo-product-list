@@ -1,9 +1,11 @@
 .row {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: var(--product-table-cell-gap);
     max-height: 10rem;
+    container-name: prodDescInTable;
+    container-type: inline-size;
 
     .cell {
         /* color: red; */
@@ -22,13 +24,19 @@
             width: 1.5rem;
         }
         &:nth-child(2) {
-            width: 15rem;
+            width: 100%;
         }
         &:nth-child(3) {
-            width: 15rem;
+            width: 100%;
         }
         &:nth-child(4) {
-            width: 25rem;
-        }    
+            width: 100%;
+        }
+
+        @container (max-width: 900px) {
+            &:nth-child(4) {
+                display: none;
+            }    
+        }
     }
 }

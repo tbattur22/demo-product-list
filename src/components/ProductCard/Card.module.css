@@ -1,13 +1,19 @@
 .container {
+    margin: 0.5em;
+    padding: 0.5em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     box-sizing:border-box;
-    width: fit-content;
-    height: fit-content;
 
     &:hover {
         border: 1px solid white;
+    }
+
+    img {
+        object-fit: cover;
+        max-inline-size: 100%;
+        max-block-size: 100%;
     }
 }

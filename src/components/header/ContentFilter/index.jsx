@@ -5,7 +5,7 @@ import { handleSearchInput } from '../../../services/product/model/search'
 
 const ContentFilter = ({search, setSearch}) => {
     const [curInputValue, setCurInputValue] = useState('');
-    console.log(`ContentFilter(${search}):`);
+    // console.log(`ContentFilter(${search}):`);
     const handleSearch = (ev) => {
         handleSearchInput(ev.target.value.trim(), search, setCurInputValue, setSearch);
     }
